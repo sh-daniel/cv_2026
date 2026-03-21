@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>CV Daniel Olivares - Estilo Harvard Mejorado</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrious/dist/qrious.min.js"></script>
+
+<style>
+body {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12pt;
+    margin: 40px;
+    color: #000;
+    background: #fff;
+    line-height: 1.5; /* Interlineado uniforme general */
+}
+
+#cvContent {
+    max-width: 800px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 26pt;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    color: #003366;
+}
+
+header h2 {
+    font-size: 12pt;
+    font-weight: normal;
+    margin-bottom: 5px;
+    color: #0066cc;
+}
+
+header p {
+    font-size: 10pt;
+    margin: 0;
+}
+
+section {
+    margin-bottom: 25px;
+    page-break-inside: avoid;
+    padding-bottom: 10px;
+}
+
+section h2 {
+    font-size: 14pt;
+    font-weight: bold;
+    border-bottom: 2px solid #0066cc;
+    padding-bottom: 3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #0066cc;
+}
+
+ul {
+    margin: 5px 0 0 20px;
+    padding: 0;
+    page-break-inside: avoid;
+    line-height: 1.5; /* Interlineado uniforme en listas */
+}
+
+ul li {
+    page-break-inside: avoid;
+}
+
+p, ul li {
+    line-height: 1.5; /* Interlineado uniforme en todo el contenido */
+}
+
+.experience-item {
+    margin-bottom: 15px;
+    page-break-inside: avoid;
+    text-align: justify;
+}
+
+.experience-title {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 12pt;
+    color: #003366;
+}
+
+.experience-item span {
+    font-style: italic;
+    font-size: 10pt;
+}
+
+.experience-item p {
+    margin: 5px 0;
+    font-size: 10pt;
+    text-align: justify;
+}
+
+#downloadPdfBtn {
+    padding: 10px 20px;
+    background: #0066cc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12pt;
+    margin: 20px auto;
+    display: block;
+}
+#downloadPdfBtn:hover {
+    background: #004a99;
+}
+
+/* Flex para columnas de HERRAMIENTAS Y COMPETENCIAS */
+.three-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.three-columns > div {
+    flex: 1;
+    min-width: 220px;
+}
+
+.three-columns p {
+    line-height: 1.5; /* Igual interlineado que responsabilidades */
+    margin: 3px 0;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 15px 0;
+}
+</style>
+</head>
+
+<body>
+
+<button id="downloadPdfBtn">Descargar PDF</button>
+
+<div id="cvContent">
+
+<header>
+<h1>Daniel Olivares Contreras</h1>
+<h2>Ingeniero Senior en Performance | QA | Banca | Cloud</h2>
+<p>
+<a href="https://wa.me/56942788737">+56 9 427 88 737</a> | 
+<a href="mailto:daniel.ignacio@gmail.com">daniel.ignacio@gmail.com</a> | 
+<a href="https://www.linkedin.com/in/daniel-olivares-contreras-5642875b/">LinkedIn</a> | 
+<a href="https://sh-daniel.github.io/cv_daniel_olivares/">cv_Cloud</a>
+</p>
+</header>
+
+<section>
+<h2>PERFIL PROFESIONAL</h2>
+<p>
+Ingeniero en Performance con más de 12 años de experiencia en sistemas críticos del sector financiero.
+Especializado en pruebas de carga y estrés, análisis de performance en aplicaciones y bases de datos,
+optimización de consultas y gestión de ambientes complejos multi-entorno. Experiencia en plataformas
+de alta disponibilidad, diagnóstico de cuellos de botella, soporte a producción y colaboración con
+equipos de desarrollo, QA y DevOps.
+</p>
+</section>
+
+<hr>
+
+<section>
+<h2>PROYECTO DESTACADO – TRANSBANK</h2>
+<p><b>QA / Ingeniero de Performance – Transbank</b></p>
+<p>
+Responsable de la gestión integral de ambientes QA en soluciones de pago, asegurando la calidad,
+estabilidad y correcta operación de sistemas críticos del sector financiero. Participación activa
+en el ciclo completo de pruebas en entornos de simulación altamente similares a producción.
+</p>
+<p><b>Principales responsabilidades y logros:</b></p>
+<ul>
+<li>Gestión y administración de ambientes QA complejos, incluyendo simuladores de red y terminales de pago.</li>
+<li>Diseño, ejecución y mantenimiento de casos de prueba funcionales, integrales y de regresión.</li>
+<li>Gestión de proyectos de bines de tarjetas (Visa, Mastercard, Amex, Discover).</li>
+<li>Validación end-to-end de flujos transaccionales.</li>
+<li>Análisis de resultados y gestión de incidencias con equipos de desarrollo, QA y DevOps.</li>
+<li>Monitoreo de logs en ambientes on-premise y AWS.</li>
+<li>Verificación de integraciones con APIs y Kafka.</li>
+<li>Validación de datos en PostgreSQL y Snowflake.</li>
+<li>Pruebas de carga y estrés, identificación de cuellos de botella.</li>
+<li>Soporte a despliegues y validación post-producción.</li>
+<li>Gestión de vulnerabilidades en QA.</li>
+<li>Documentación y trazabilidad de pruebas.</li>
+</ul>
+</section>
+
+<hr>
+
+<section>
+<h2>HERRAMIENTAS Y COMPETENCIAS</h2>
+<div class="three-columns">
+  <div>
+    <p>Performance testing (JMeter)</p>
+    <p>Load & Stress testing</p>
+    <p>Performance analysis (aplicaciones + bases de datos)</p>
+    <p>Optimización SQL / Oracle</p>
+    <p>Gestión de ambientes (DEV / QA / PROD)</p>
+    <p>Middleware performance</p>
+  </div>
+  <div>
+    <p>Análisis de incidentes en producción</p>
+    <p>Integración CI/CD</p>
+    <p>Fundamentos de performance en la nube</p>
+    <p>JMeter, Postman, SQL / PL/SQL / Oracle / PostgreSQL</p>
+    <p>Kafka / MQ / JMS</p>
+    <p>Jenkins / Git / Bitbucket</p>
+  </div>
+  <div>
+    <p>Datastage / ODI / Snowflake</p>
+    <p>Linux / Unix / Middleware / Weblogic</p>
+    <p>AWS / Google Cloud</p>
+    <p>CA Workload Automation / Control-M / WinSCP</p>
+    <p>Jira / Confluence / Xray</p>
+  </div>
+</div>
+</section>
+
+<hr>
+
+<section>
+<h2>EXPERIENCIA PROFESIONAL</h2>
+
+<div class="experience-item">
+<div class="experience-title">
+<span>Tata Consultancy Services – Transbank</span>
+<span>Feb 2022 – Feb 2026 | Analista BFSIUS SE&Latam</span>
+</div>
+<p>Realizar chequeo y análisis de aplicativos, diseño de casos de prueba, identificación de errores, análisis de resultados y soporte a releases.</p>
+</div>
+
+<div class="experience-item">
+<div class="experience-title">
+<span>Connectis Global Services Chile S.A – Banco Consorcio</span>
+<span>Ene 2022 – Feb 2022 | Analista QA</span>
+</div>
+<p>Diseño, análisis y ejecución de casos de prueba complejos, flujos fríos, regresión y casos de borde.</p>
+<p><b>Herramientas:</b> SQL Developer, SQL, Jira, Mantis, Testlink, Confluence, Oracle, SQL Server</p>
+</div>
+
+<div class="experience-item">
+<div class="experience-title">
+<span>Inmetrics – Banchile Inversiones / Banco Itaú</span>
+<span>Ene 2013 – Dic 2021 | Analista Senior de Performance</span>
+</div>
+<p>Pruebas de carga y estrés con JMeter, análisis de performance en aplicaciones backend y Oracle, gestión de ambientes QA, laboratorio y producción, soporte a incidentes críticos.</p>
+<p><b>Herramientas:</b> JMeter, Weblogic, Oracle Enterprise Manager 10g, middlewares, ASM, Postman, SoapUI</p>
+</div>
+
+<div class="experience-item">
+<div class="experience-title">
+<span>HP Chile – Emel, Binaria, Transbank</span>
+<span>Abr 2009 – Ene 2013 | Soporte a Producción / Operador de Sistemas</span>
+</div>
+<p>Monitoreo de procesos batch, gestión de workload y respaldos, análisis de logs e incidentes.</p>
+<p><b>Herramientas:</b> Linux, HP-UX, Unix, Windows, Workload, Prognosys, SQL Plus, Query Builder, Data Protector</p>
+</div>
+
+</section>
+
+<hr>
+
+<section>
+<h2>EDUCACIÓN</h2>
+<p>Ingeniería en Ejecución en Informática — AIEP (2006)</p>
+
+<p><b>Cursos y Certificaciones Relevantes (plataforma TCS):</b></p>
+<p>
+Cucumber, Pyspark, Gestión de Conflictos y Negociación, Toma de Decisiones, Jira, GenIA, Excel, AWS, Azure, Google Cloud, Selenium, UML, Scrum, Frameworks, Linux, DevOps, Git, Data Science, Cybersecurity, Oracle, SQL, Shell Scripting (Bash), Python Scripting, SQL Server, PostgreSQL, Apache Kafka, Postman.
+</p>
+<p>Estos representan los cursos más relevantes realizados para fortalecer competencias técnicas y de gestión.</p>
+</section>
+
+</div>
+
+<script>
+document.getElementById("downloadPdfBtn").addEventListener("click", () => {
+    const element = document.getElementById("cvContent");
+    const opt = {
+        margin: 10,
+        filename: 'CV_Daniel_Olivares.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    };
+    html2pdf().set(opt).from(element).save();
+});
+</script>
+
+</body>
+</html>
