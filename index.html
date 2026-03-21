@@ -2,10 +2,11 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>CV Daniel Olivares - Estilo Harvard Mejorado</title>
+<title>CV Daniel Olivares - Estilo Harvard Mejorado con QR</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/qrious/dist/qrious.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
 <style>
 body {
@@ -14,16 +15,19 @@ body {
     margin: 40px;
     color: #000;
     background: #fff;
-    line-height: 1.5; /* Interlineado uniforme general */
+    line-height: 1.5;
 }
 
 #cvContent {
     max-width: 800px;
     margin: auto;
+    position: relative;
 }
 
 header {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 30px;
 }
 
@@ -41,9 +45,13 @@ header h2 {
     color: #0066cc;
 }
 
-header p {
+header .contact-links {
     font-size: 10pt;
-    margin: 0;
+}
+
+.qr-container {
+    width: 120px;
+    height: 120px;
 }
 
 section {
@@ -65,8 +73,7 @@ section h2 {
 ul {
     margin: 5px 0 0 20px;
     padding: 0;
-    page-break-inside: avoid;
-    line-height: 1.5; /* Interlineado uniforme en listas */
+    line-height: 1.5;
 }
 
 ul li {
@@ -74,7 +81,7 @@ ul li {
 }
 
 p, ul li {
-    line-height: 1.5; /* Interlineado uniforme en todo el contenido */
+    line-height: 1.5;
 }
 
 .experience-item {
@@ -117,7 +124,6 @@ p, ul li {
     background: #004a99;
 }
 
-/* Flex para columnas de HERRAMIENTAS Y COMPETENCIAS */
 .three-columns {
     display: flex;
     flex-wrap: wrap;
@@ -130,7 +136,7 @@ p, ul li {
 }
 
 .three-columns p {
-    line-height: 1.5; /* Igual interlineado que responsabilidades */
+    line-height: 1.5;
     margin: 3px 0;
 }
 
@@ -149,14 +155,20 @@ hr {
 <div id="cvContent">
 
 <header>
+<div>
 <h1>Daniel Olivares Contreras</h1>
 <h2>Ingeniero Senior en Performance | QA | Banca | Cloud</h2>
-<p>
+<p class="contact-links">
 <a href="https://wa.me/56942788737">+56 9 427 88 737</a> | 
 <a href="mailto:daniel.ignacio@gmail.com">daniel.ignacio@gmail.com</a> | 
 <a href="https://www.linkedin.com/in/daniel-olivares-contreras-5642875b/">LinkedIn</a> | 
 <a href="https://sh-daniel.github.io/cv_2026/">cv_Cloud</a>
 </p>
+</div>
+<div class="qr-container">
+    <div id="qrcode"></div>
+    <div class="qr-text" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-weight:bold;font-size:12px;"></div>
+</div>
 </header>
 
 <section>
@@ -275,7 +287,6 @@ en el ciclo completo de pruebas en entornos de simulación altamente similares a
 <section>
 <h2>EDUCACIÓN</h2>
 <p>Ingeniería en Ejecución en Informática — AIEP (2006)</p>
-
 <p><b>Cursos y Certificaciones Relevantes (plataforma TCS):</b></p>
 <p>
 Cucumber, Pyspark, Gestión de Conflictos y Negociación, Toma de Decisiones, Jira, GenIA, Excel, AWS, Azure, Google Cloud, Selenium, UML, Scrum, Frameworks, Linux, DevOps, Git, Data Science, Cybersecurity, Oracle, SQL, Shell Scripting (Bash), Python Scripting, SQL Server, PostgreSQL, Apache Kafka, Postman.
@@ -286,6 +297,27 @@ Cucumber, Pyspark, Gestión de Conflictos y Negociación, Toma de Decisiones, Ji
 </div>
 
 <script>
+// Generar QR con espacio central
+const qrSize = 120;
+const qr = new QRCode(document.getElementById("qrcode"), {
+    text: "https://sh-daniel.github.io/cv_2026/",
+    width: qrSize,
+    height: qrSize,
+    colorDark: "#000000",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.H
+});
+setTimeout(() => {
+    const canvas = document.querySelector("#qrcode canvas");
+    const ctx = canvas.getContext("2d");
+    const boxSize = qrSize * 0.35;
+    const x = (qrSize - boxSize)/2;
+    const y = (qrSize - boxSize)/2;
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(x, y, boxSize, boxSize);
+}, 100);
+
+// Descargar PDF
 document.getElementById("downloadPdfBtn").addEventListener("click", () => {
     const element = document.getElementById("cvContent");
     const opt = {
