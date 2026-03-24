@@ -11,7 +11,7 @@
 <style>
 body {
     font-family: "Times New Roman", Times, serif;
-    font-size: 12pt;
+    font-size: 11pt;
     margin: 40px;
     color: #000;
     background: #fff;
@@ -19,20 +19,26 @@ body {
 }
 
 #cvContent {
-    max-width: 800px;
+    max-width: 1200px;
     margin: auto;
     position: relative;
 }
 
+/* --- HEADER CENTRADO CON QR --- */
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; 
     align-items: center;
+    gap: 40px;
     margin-bottom: 30px;
 }
 
+.header-text {
+    text-align: center; 
+}
+
 header h1 {
-    font-size: 26pt;
+    font-size: 24pt;
     margin-bottom: 5px;
     text-transform: uppercase;
     color: #003366;
@@ -49,25 +55,29 @@ header .contact-links {
     font-size: 10pt;
 }
 
+/* QR */
 .qr-container {
     width: 120px;
     height: 120px;
 }
 
+/* --- SECCIONES --- */
 section {
     margin-bottom: 25px;
     page-break-inside: avoid;
     padding-bottom: 10px;
 }
 
+/* TITULOS DE SECCIONES CENTRADOS */
 section h2 {
-    font-size: 14pt;
+    font-size: 13pt;
     font-weight: bold;
     border-bottom: 2px solid #0066cc;
     padding-bottom: 3px;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     color: #0066cc;
+    text-align: center; 
 }
 
 ul {
@@ -84,31 +94,20 @@ p, ul li {
     line-height: 1.5;
 }
 
+/* EXPERIENCIA */
 .experience-item {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     page-break-inside: avoid;
-    text-align: justify;
+    text-align: left; 
 }
 
-.experience-title {
-    display: flex;
-    justify-content: space-between;
-    font-weight: bold;
-    font-size: 12pt;
-    color: #003366;
+/* CONTENIDO DE EXPERIENCIA PROFESIONAL TOTALMENTE IZQUIERDA */
+.experience-item p,
+.experience-item ul {
+    text-align: left;
 }
 
-.experience-item span {
-    font-style: italic;
-    font-size: 10pt;
-}
-
-.experience-item p {
-    margin: 5px 0;
-    font-size: 10pt;
-    text-align: justify;
-}
-
+/* BOTON PDF */
 #downloadPdfBtn {
     padding: 10px 20px;
     background: #0066cc;
@@ -124,6 +123,7 @@ p, ul li {
     background: #004a99;
 }
 
+/* TRES COLUMNAS */
 .three-columns {
     display: flex;
     flex-wrap: wrap;
@@ -143,7 +143,7 @@ p, ul li {
 hr {
     border: 0;
     border-top: 1px solid #cccccc;
-    margin: 15px 0;
+    margin: 5px 0;
 }
 </style>
 </head>
@@ -155,20 +155,19 @@ hr {
 <div id="cvContent">
 
 <header>
-<div>
-<h1>Daniel Olivares Contreras</h1>
-<h2>Ingeniero Senior en Performance | QA | Banca | Cloud</h2>
-<p class="contact-links">
-<a href="https://wa.me/56942788737">+56 9 427 88 737</a> | 
-<a href="mailto:daniel.ignacio@gmail.com">daniel.ignacio@gmail.com</a> | 
-<a href="https://www.linkedin.com/in/daniel-olivares-contreras-5642875b/">LinkedIn</a> | 
-<a href="https://sh-daniel.github.io/cv_2026/">cv_Cloud</a>
-</p>
-</div>
-<div class="qr-container">
-    <div id="qrcode"></div>
-    <div class="qr-text" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-weight:bold;font-size:12px;"></div>
-</div>
+  <div class="header-text">
+    <h1>Daniel Olivares Contreras</h1>
+    <h2>Ingeniero Senior en Performance | QA | Banca | Cloud</h2>
+    <p class="contact-links">
+      <a href="https://wa.me/56942788737">+56 9 427 88 737</a> | 
+      <a href="mailto:daniel.ignacio@gmail.com">daniel.ignacio@gmail.com</a> | 
+      <a href="https://www.linkedin.com/in/daniel-olivares-contreras-5642875b/">LinkedIn</a> | 
+      <a href="https://sh-daniel.github.io/cv_2026/">cv_Cloud</a>
+    </p>
+  </div>
+  <div class="qr-container">
+      <div id="qrcode"></div>
+  </div>
 </header>
 
 <section>
@@ -188,9 +187,7 @@ equipos de desarrollo, QA y DevOps.
 <h2>PROYECTO DESTACADO – TRANSBANK</h2>
 <p><b>QA / Ingeniero de Performance – Transbank</b></p>
 <p>
-Responsable de la gestión integral de ambientes QA en soluciones de pago, asegurando la calidad,
-estabilidad y correcta operación de sistemas críticos del sector financiero. Participación activa
-en el ciclo completo de pruebas en entornos de simulación altamente similares a producción.
+Responsable de la gestión integral de ambientes QA en soluciones de pago, asegurando la calidad, estabilidad y correcta operación de sistemas críticos del sector financiero. Participación activa en el ciclo completo de pruebas en entornos de simulación altamente similares a producción, con fuerte foco en la trazabilidad, documentación y control de versiones.
 </p>
 <p><b>Principales responsabilidades y logros:</b></p>
 <ul>
@@ -198,14 +195,17 @@ en el ciclo completo de pruebas en entornos de simulación altamente similares a
 <li>Diseño, ejecución y mantenimiento de casos de prueba funcionales, integrales y de regresión.</li>
 <li>Gestión de proyectos de bines de tarjetas (Visa, Mastercard, Amex, Discover).</li>
 <li>Validación end-to-end de flujos transaccionales.</li>
-<li>Análisis de resultados y gestión de incidencias con equipos de desarrollo, QA y DevOps.</li>
+<li>Análisis, seguimiento y gestión detallada de incidencias, requerimientos y ciclos de vida de pruebas mediante Jira, asegurando trazabilidad completa desde la detección hasta la resolución.</li>
+<li>Seguimiento y control de versiones, releases y evolución de proyectos utilizando tanto Jira como Confluence, garantizando consistencia entre la gestión operativa y la documentación funcional.</li>
+<li>Administración centralizada de la información del proyecto, manteniendo visibilidad detallada del estado de avances, dependencias y entregas.</li>
 <li>Monitoreo de logs en ambientes on-premise y AWS.</li>
 <li>Verificación de integraciones con APIs y Kafka.</li>
 <li>Validación de datos en PostgreSQL y Snowflake.</li>
 <li>Pruebas de carga y estrés, identificación de cuellos de botella.</li>
 <li>Soporte a despliegues y validación post-producción.</li>
 <li>Gestión de vulnerabilidades en QA.</li>
-<li>Documentación y trazabilidad de pruebas.</li>
+<li>Documentación técnica, análisis funcional y trazabilidad completa en Confluence, incluyendo registro detallado de versiones, cambios, decisiones y resultados de pruebas.</li>
+<li>Generación de documentación estructurada y colaborativa en Confluence, alineada con la gestión de tareas en Jira para asegurar seguimiento integral del proyecto.</li>
 </ul>
 </section>
 
@@ -245,41 +245,21 @@ en el ciclo completo de pruebas en entornos de simulación altamente similares a
 <section>
 <h2>EXPERIENCIA PROFESIONAL</h2>
 
-<div class="experience-item">
-<div class="experience-title">
-<span>Tata Consultancy Services – Transbank</span>
-<span>Feb 2022 – Feb 2026 | Analista BFSIUS SE&Latam</span>
-</div>
-<p>Realizar chequeo y análisis de aplicativos, diseño de casos de prueba, identificación de errores, análisis de resultados y soporte a releases.</p>
-</div>
+<p><b>Tata Consultancy Services – Transbank</b><br>
+Feb 2022 – Feb 2026 | Analista BFSIUS SE&Latam<br>
+Realizar chequeo y análisis de aplicativos, diseño de casos de prueba, identificación de errores, análisis de resultados y soporte a releases.</p>
 
-<div class="experience-item">
-<div class="experience-title">
-<span>Connectis Global Services Chile S.A – Banco Consorcio</span>
-<span>Ene 2022 – Feb 2022 | Analista QA</span>
-</div>
-<p>Diseño, análisis y ejecución de casos de prueba complejos, flujos fríos, regresión y casos de borde.</p>
-<p><b>Herramientas:</b> SQL Developer, SQL, Jira, Mantis, Testlink, Confluence, Oracle, SQL Server</p>
-</div>
+<p><b>Connectis Global Services Chile S.A – Banco Consorcio</b><br>
+Ene 2022 – Feb 2022 | Analista QA<br>
+Diseño, análisis y ejecución de casos de prueba complejos, flujos fríos, regresión y casos de borde.</p>
 
-<div class="experience-item">
-<div class="experience-title">
-<span>Inmetrics – Banchile Inversiones / Banco Itaú</span>
-<span>Ene 2013 – Dic 2021 | Analista Senior de Performance</span>
-</div>
-<p>Pruebas de carga y estrés con JMeter, análisis de performance en aplicaciones backend y Oracle, gestión de ambientes QA, laboratorio y producción, soporte a incidentes críticos.</p>
-<p><b>Herramientas:</b> JMeter, Weblogic, Oracle Enterprise Manager 10g, middlewares, ASM, Postman, SoapUI</p>
-</div>
+<p><b>Inmetrics – Banchile Inversiones / Banco Itaú</b><br>
+Ene 2013 – Dic 2021 | Analista Senior de Performance<br>
+Pruebas de carga y estrés con JMeter, análisis de performance en aplicaciones backend y Oracle, gestión de ambientes QA, laboratorio y producción, soporte a incidentes críticos.</p>
 
-<div class="experience-item">
-<div class="experience-title">
-<span>HP Chile – Emel, Binaria, Transbank</span>
-<span>Abr 2009 – Ene 2013 | Soporte a Producción / Operador de Sistemas</span>
-</div>
-<p>Monitoreo de procesos batch, gestión de workload y respaldos, análisis de logs e incidentes.</p>
-<p><b>Herramientas:</b> Linux, HP-UX, Unix, Windows, Workload, Prognosys, SQL Plus, Query Builder, Data Protector</p>
-</div>
-
+<p><b>HP Chile – Emel, Binaria, Transbank</b><br>
+Abr 2009 – Ene 2013 | Soporte a Producción / Operador de Sistemas<br>
+Monitoreo de procesos batch, gestión de workload y respaldos, análisis de logs e incidentes.</p>
 </section>
 
 <hr>
@@ -287,17 +267,22 @@ en el ciclo completo de pruebas en entornos de simulación altamente similares a
 <section>
 <h2>EDUCACIÓN</h2>
 <p>Ingeniería en Ejecución en Informática — AIEP (2006)</p>
+
 <p><b>Cursos y Certificaciones Relevantes (plataforma TCS):</b></p>
 <p>
-Cucumber, Pyspark, Gestión de Conflictos y Negociación, Toma de Decisiones, Jira, GenIA, Excel, AWS, Azure, Google Cloud, Selenium, UML, Scrum, Frameworks, Linux, DevOps, Git, Data Science, Cybersecurity, Oracle, SQL, Shell Scripting (Bash), Python Scripting, SQL Server, PostgreSQL, Apache Kafka, Postman.
+<b>Testing & QA:</b> Cucumber, Selenium, Jira, Confluence, Xray, Testlink, Mantis<br>
+<b>Programación & Scripting:</b> Python Scripting, Shell Scripting (Bash), SQL, PL/SQL, SQL Server, PostgreSQL, SQL Developer<br>
+<b>Data & Cloud:</b> Pyspark, Data Science, AWS, Azure, Google Cloud, Apache Kafka, Datastage, ODI, Snowflake<br>
+<b>Metodologías & Frameworks:</b> Scrum, UML, Frameworks, DevOps, CA Workload Automation / Control-M<br>
+<b>Infraestructura & Middleware:</b> Linux, Unix, Middleware, Weblogic, WinSCP<br>
+<b>Habilidades Blandas:</b> Gestión de Conflictos y Negociación, Toma de Decisiones<br>
+<b>Otros:</b> Excel, Cybersecurity
 </p>
-<p>Estos representan los cursos más relevantes realizados para fortalecer competencias técnicas y de gestión.</p>
 </section>
 
 </div>
 
 <script>
-// Generar QR con espacio central
 const qrSize = 120;
 const qr = new QRCode(document.getElementById("qrcode"), {
     text: "https://sh-daniel.github.io/cv_2026/",
@@ -307,6 +292,7 @@ const qr = new QRCode(document.getElementById("qrcode"), {
     colorLight: "#ffffff",
     correctLevel: QRCode.CorrectLevel.H
 });
+
 setTimeout(() => {
     const canvas = document.querySelector("#qrcode canvas");
     const ctx = canvas.getContext("2d");
@@ -317,7 +303,6 @@ setTimeout(() => {
     ctx.fillRect(x, y, boxSize, boxSize);
 }, 100);
 
-// Descargar PDF
 document.getElementById("downloadPdfBtn").addEventListener("click", () => {
     const element = document.getElementById("cvContent");
     const opt = {
